@@ -1,4 +1,3 @@
-
 # Fantasy Chess
 
 Fantasy Chess is a command line game written in C++ where the chess pieces have
@@ -21,13 +20,22 @@ in *MASTER UML.xmi*
 
 ### GOF Design Patterns
 
+Overview
+
+![Overview Class Diagram](https://dl.dropboxusercontent.com/u/4042547/class-diagram.jpeg)
+
 #### Creational Patterns
 
 *Factory Method* is used to create a board of user-specified dimensions, although
 only a 2D board is implemented
 
+![Factory Method](https://dl.dropboxusercontent.com/u/4042547/factory-method.jpeg)
+
+
 *Prototype* is used to create prototypical instances of the respective piece
 types aiding the creation process
+
+![Prototype](https://dl.dropboxusercontent.com/u/4042547/prototype.jpeg)
 
 
 #### Structural Patterns
@@ -41,13 +49,17 @@ spells
 *State* is used to control the players turn and alternate between teams
 
 *Strategy* is used to setup the board according to a random or fixed placement
-of pieces
+of pieces and to transparently treat each piece composing of a reach strategy
+that affects the way it moves
+
+![Strategy](https://dl.dropboxusercontent.com/u/4042547/strategy.jpeg)
+
 
 *Interpreter* is used to parse user input into data the program can process (
 this pattern is responsible for much of the preemptive error checking and validation)
 
-*Strategy* is used to transparently treat each piece composing of a reach strategy
-that affects the way it moves
+![Interpreter](https://dl.dropboxusercontent.com/u/4042547/interpreter.jpeg)
+
 
 *Template Method* is defined by the 'Team turn cycle' which is comprised of
 primitive operations of select, spell and move. This pattern looks surprisingly
